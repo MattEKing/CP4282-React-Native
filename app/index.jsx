@@ -6,7 +6,7 @@ import CustomButton from "../assets/Components/customButton.jsx"
 
 export default function Index() {
     const [currentRecipe,setCurrentRecipe] = useState(0);
-    const [currentItem, setCurrentItem] = useState(0);
+    const [currentItem, setCurrentItem] = useState("Pesto Pasta");
   return (
     <View
       style={{
