@@ -3,9 +3,9 @@ import {Text, View, Image} from 'react-native';
 export default function Recipes({recipes}) {
     return (
         <>
-        <Text style={{fontWeight: 'bold', fontSize: 40}}>{recipes.Name}</Text>
+        <Text style={{fontWeight: 'bold', fontSize: 40, marginBottom: 20}}>{recipes.Name}</Text>
         <Image
-        style={{width:300, height:300}}
+        style={{width:250, height:250}}
         source={{uri: recipes.Image}}
         />
         <Text style={{fontWeight: 'bold', fontSize: 30}}>Ingredients:</Text>

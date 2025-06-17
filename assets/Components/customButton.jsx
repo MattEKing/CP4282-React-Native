@@ -11,7 +11,7 @@ export default function CustomButton({ label, onPress, selected}) {
               padding: 10,
               margin: 5
               },
-          selected == label ? {backgroundColor: "#89CFF0"}: {backgroundColor: "#DDDDDD"}
+          selected == label ? {backgroundColor: "#C7C2FF"}: {backgroundColor: "#BFBFBF"}
           ]
           }>{label}</Text>
       </TouchableOpacity>

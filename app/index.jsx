@@ -13,12 +13,13 @@ export default function Index() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "#E8E8E8"
       }}
     >
         <View style={{
                flexDirection: "row",
                position: "absolute",
-               top: 40
+               top: 25
                }}>
             <CustomButton label="Pesto Pasta" onPress={() => {
                 setCurrentRecipe(0)
