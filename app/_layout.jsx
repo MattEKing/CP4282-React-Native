@@ -1,8 +1,10 @@
 import { Tabs } from "expo-router";
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import {RecipesProvider} from '../assets/Components/repContext.jsx';
 
 export default function RootLayout() {
   return(
+      <RecipesProvider>
       <Tabs screenOptions={{ tabBarActiveTintColor: "#FFFFFF",tabBarInactiveTintColor: "#E8E8E8" ,tabBarStyle: {backgroundColor: "#166088"}}} >
          <Tabs.Screen name="index"
           options={{
@@ -29,5 +31,6 @@ export default function RootLayout() {
                 }}
             />
         </Tabs>
+        </RecipesProvider>
               );
 }

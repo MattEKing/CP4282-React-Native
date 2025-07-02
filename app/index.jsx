@@ -1,12 +1,14 @@
 import { Text, View, Button,TouchableOpacity } from "react-native";
-import {useState} from 'react';
+import {useState, useContext} from 'react';
 import Recipes from "../assets/Components/recipes.jsx";
-import recipesData from "../assets/recipes.json";
+// import recipesData from "../assets/recipes.json";
 import CustomButton from "../assets/Components/customButton.jsx"
+import {RecipesContext} from '../assets/Components/repContext.jsx';
 
 export default function Index() {
-    const [currentRecipe,setCurrentRecipe] = useState(0);
+//     const [currentRecipe,setCurrentRecipe] = useState(0);
     const [currentItem, setCurrentItem] = useState("Pesto Pasta");
+    const {recipesData, setRecipesData, recipeIndex, setRecipeIndex} = useContext(RecipesContext);
   return (
     <View
       style={{
@@ -22,20 +24,23 @@ export default function Index() {
                top: 25
                }}>
             <CustomButton label="Pesto Pasta" onPress={() => {
-                setCurrentRecipe(0)
+//                 setCurrentRecipe(0)
+                setRecipeIndex(0)
                 setCurrentItem("Pesto Pasta")
                 }} selected={currentItem}/>
             <CustomButton label="Chicken Parmesan" onPress={() => {
-                setCurrentRecipe(1)
+//                 setCurrentRecipe(1)
+                setRecipeIndex(1)
                 setCurrentItem("Chicken Parmesan")
                 }} selected={currentItem}/>
             <CustomButton label="Margherita pizza" onPress={() => {
-                setCurrentRecipe(2)
+//                 setCurrentRecipe(2)
+                setRecipeIndex(2)
                 setCurrentItem("Margherita pizza")
                 }} selected={currentItem}/>
          </View>
 
-      <Recipes recipes={recipesData[currentRecipe]}/>
+      <Recipes recipes={recipesData[recipeIndex]}/>
       <View style={{
           flexDirection: "row",
           position: "absolute",
