@@ -1,5 +1,4 @@
-import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
-import { useState} from 'react'
+import { Text, TouchableOpacity, View } from 'react-native';
 
 export default function CustomButton({ label, onPress, selected}) {
   return (
@@ -9,7 +8,8 @@ export default function CustomButton({ label, onPress, selected}) {
               {
               fontSize: 15,
               padding: 10,
-              margin: 5
+              margin: 5,
+              textAlign: "center"
               },
           selected == label ? {backgroundColor: "#C7C2FF"}: {backgroundColor: "#BFBFBF"}
           ]
